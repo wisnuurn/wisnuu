@@ -3,166 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biodata | I Gede Wisnu Ratya Naratama</title>
+<title>Wisnu Ratya | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    scroll-behavior:smooth;
 }
 
-body {
-    background: linear-gradient(135deg, #141E30, #243B55);
-    color: white;
+body{
+    background:#0f0f14;
+    color:#ffffff;
 }
 
-/* NAVBAR */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 40px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+/* ================= NAVBAR ================= */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 0;
+    display:flex;
+    justify-content:center;
+    transition:0.4s;
+    z-index:1000;
 }
 
-nav h2 {
-    color: #00f2fe;
+nav.scrolled{
+    background:#111118;
+    box-shadow:0 5px 20px rgba(255,0,150,0.2);
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:50px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+nav ul li a{
+    text-decoration:none;
+    color:#aaa;
+    font-weight:500;
+    letter-spacing:1px;
+    transition:0.3s;
 }
 
-nav ul li a:hover {
-    color: #00f2fe;
+nav ul li a:hover{
+    color:#ff2ea6;
 }
 
-/* SECTION */
-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 20px 40px;
+/* ================= SECTION ================= */
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px;
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
 }
 
-.card {
-    width: 400px;
-    padding: 35px;
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    text-align: center;
+section.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
-/* FOTO */
-.profile-img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 3px solid #00f2fe;
-    object-fit: cover;
-    cursor: pointer;
-    transition: 0.3s;
+/* ================= CARD ================= */
+.card{
+    width:950px;
+    padding:60px;
+    background:#16161f;
+    border-radius:20px;
+    box-shadow:0 0 40px rgba(255,0,150,0.15);
 }
 
-.profile-img:hover {
-    transform: scale(1.1);
+/* ================= PROFIL ================= */
+.profile-container{
+    display:flex;
+    align-items:center;
+    gap:60px;
 }
 
-/* BIODATA */
-h1 {
-    margin-bottom: 10px;
+.profile-img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:4px solid #ff2ea6;
+    object-fit:cover;
+    cursor:pointer;
+    transition:0.4s;
 }
 
-.info {
-    text-align: left;
-    margin-top: 15px;
+.profile-img:hover{
+    box-shadow:0 0 30px #ff2ea6;
+    transform:scale(1.05);
 }
 
-.info p {
-    margin: 8px 0;
+.info h1{
+    font-size:32px;
+    margin-bottom:20px;
+    color:#ff2ea6;
 }
 
-.info span {
-    font-weight: 600;
-    color: #00f2fe;
+.info p{
+    margin:10px 0;
+    font-size:16px;
+    color:#ccc;
 }
 
-/* SOCIAL */
-.social a {
-    display: inline-block;
-    margin: 8px;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    color: white;
-    background: linear-gradient(45deg, #00f2fe, #4facfe);
-    transition: 0.3s ease;
+.info span{
+    color:#ffffff;
+    font-weight:600;
 }
 
-.social a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0,242,254,0.5);
+/* ================= KONTAK ================= */
+.social{
+    text-align:center;
 }
 
-/* MAP */
-iframe {
-    width: 100%;
-    height: 250px;
-    border: none;
-    border-radius: 15px;
+.social a{
+    display:inline-block;
+    margin:15px;
+    padding:14px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    color:#0f0f14;
+    background:#ff2ea6;
+    transition:0.3s;
 }
 
-/* MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
+.social a:hover{
+    background:#ffffff;
+    color:#ff2ea6;
+    transform:translateY(-5px);
 }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    border-radius: 15px;
+/* ================= MAP ================= */
+iframe{
+    width:100%;
+    height:400px;
+    border:none;
+    border-radius:20px;
+    filter:grayscale(100%) contrast(110%);
 }
 
-.close {
-    position: absolute;
-    top: 40px;
-    right: 60px;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
+/* ================= MODAL ================= */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.95);
+    z-index:2000;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal img{
+    max-width:60%;
+    border-radius:20px;
+}
+
+.close{
+    position:absolute;
+    top:40px;
+    right:60px;
+    font-size:40px;
+    color:#ff2ea6;
+    cursor:pointer;
 }
 </style>
 </head>
@@ -170,40 +187,34 @@ iframe {
 <body>
 
 <!-- NAVBAR -->
-<nav>
-    <h2>Wisnu</h2>
+<nav id="navbar">
     <ul>
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#biodata">Biodata</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-        <li><a href="#maps">Maps</a></li>
+        <li><a href="#profil">PROFIL</a></li>
+        <li><a href="#kontak">KONTAK</a></li>
+        <li><a href="#maps">LOKASI</a></li>
     </ul>
 </nav>
 
-<!-- SECTION 1 : PROFIL -->
+<!-- PROFIL -->
 <section id="profil">
     <div class="card">
-        <h1>Profil</h1>
-        <img src="pp.jpeg" class="profile-img" id="profileImage" alt="Profile">
-    </div>
-</section>
-
-<!-- SECTION 2 : BIODATA -->
-<section id="biodata">
-    <div class="card">
-        <h1>I Gede Wisnu Ratya Naratama</h1>
-        <div class="info">
-            <p><span>Usia:</span> 20 Tahun</p>
-            <p><span>Alamat:</span> Gang Garuda IX Jl. Batuyang, Batubulan Kangin, Sukawati</p>
-            <p><span>Kampus:</span> UHN I Gusti Bagus Sugriwa Denpasar</p>
+        <div class="profile-container">
+            <img src="pp.jpeg" class="profile-img" id="profileImage">
+            <div class="info">
+                <h1>I Gede Wisnu Ratya Naratama</h1>
+                <p><span>Usia:</span> 20 Tahun</p>
+                <p><span>Alamat:</span> Batubulan, Bali</p>
+                <p><span>Jurusan:</span> Informatika</p>
+                <p><span>Kampus:</span> UHN I Gusti Bagus Sugriwa</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- SECTION 3 : KONTAK -->
+<!-- KONTAK -->
 <section id="kontak">
     <div class="card">
-        <h1>Kontak</h1>
+        <h1 style="text-align:center;margin-bottom:40px;color:#ff2ea6;">Connect With Me</h1>
         <div class="social">
             <a href="https://instagram.com/wisnoern" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/share/17hmcHNM3K/" target="_blank">Facebook</a>
@@ -212,40 +223,56 @@ iframe {
     </div>
 </section>
 
-<!-- SECTION 4 : MAPS -->
+<!-- MAP -->
 <section id="maps">
     <div class="card">
-        <h1>Lokasi</h1>
-        <iframe 
-            src="https://maps.google.com/maps?q=Batubulan%20Kangin,%20Sukawati&t=&z=15&ie=UTF8&iwloc=&output=embed">
-        </iframe>
+        <h1 style="text-align:center;margin-bottom:40px;color:#ff2ea6;">My Location</h1>
+        <iframe src="https://maps.google.com/maps?q=Batubulan%20Kangin,%20Sukawati&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
     </div>
 </section>
 
 <!-- MODAL -->
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
+<div class="modal" id="imageModal">
+    <span class="close" id="closeModal">&times;</span>
+    <img id="modalImg">
 </div>
 
 <script>
-var modal = document.getElementById("imageModal");
-var img = document.getElementById("profileImage");
-var modalImg = document.getElementById("modalImg");
-var closeBtn = document.getElementsByClassName("close")[0];
+// Navbar scroll effect
+window.addEventListener("scroll",function(){
+    const nav=document.getElementById("navbar");
+    nav.classList.toggle("scrolled",window.scrollY>50);
+});
 
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
+// Fade-in animation
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",function(){
+    sections.forEach(sec=>{
+        const top=sec.getBoundingClientRect().top;
+        if(top<window.innerHeight-100){
+            sec.classList.add("show");
+        }
+    });
+});
+
+// Modal foto
+const img=document.getElementById("profileImage");
+const modal=document.getElementById("imageModal");
+const modalImg=document.getElementById("modalImg");
+const closeModal=document.getElementById("closeModal");
+
+img.onclick=function(){
+    modal.style.display="flex";
+    modalImg.src=this.src;
 }
 
-closeBtn.onclick = function() {
-    modal.style.display = "none";
+closeModal.onclick=function(){
+    modal.style.display="none";
 }
 
-modal.onclick = function(e) {
-    if (e.target === modal) {
-        modal.style.display = "none";
+modal.onclick=function(e){
+    if(e.target===modal){
+        modal.style.display="none";
     }
 }
 </script>
