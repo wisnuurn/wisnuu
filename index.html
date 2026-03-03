@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biodata | I Gede Wisnu Ratya Naratama</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #00f2fe;
+    font-size: 18px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00f2fe;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 100px 20px 20px 20px;
+}
+
+/* CARD */
+.card {
+    width: 400px;
+    padding: 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #00f2fe;
+    margin-bottom: 15px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.info {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.info p {
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.info span {
+    font-weight: 600;
+    color: #00f2fe;
+}
+
+.social {
+    margin-top: 15px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,242,254,0.5);
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+footer {
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    border-radius: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Wisnu</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+</nav>
+
+<div class="card" id="home">
+    
+    <img src="pp.jpeg" class="profile-img" id="profileImage" alt="Profile">
+
+    <h1 id="profil">I Gede Wisnu Ratya Naratama</h1>
+    <p class="subtitle">Mahasiswa Informatika - Semester 4</p>
+
+    <div class="info">
+        <p><span>Usia:</span> 20 Tahun</p>
+        <p><span>Alamat:</span> Gang Garuda IX Jl. Batuyang, Batubulan Kangin, Sukawati</p>
+        <p><span>Kampus:</span> UHN I Gusti Bagus Sugriwa Denpasar</p>
+    </div>
+
+    <div class="social" id="kontak">
+        <a href="https://instagram.com/wisnoern" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/share/17hmcHNM3K/" target="_blank">Facebook</a>
+        <a href="https://wa.me/6281238997725" target="_blank">WhatsApp</a>
+    </div>
+
+    <div class="map-container">
+        <iframe 
+            src="https://maps.google.com/maps?q=Batubulan%20Kangin,%20Sukawati&t=&z=15&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+    </div>
+
+    <footer>
+        © 2026 Wisnu Ratya
+    </footer>
+
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+var modal = document.getElementById("imageModal");
+var img = document.getElementById("profileImage");
+var modalImg = document.getElementById("modalImg");
+var closeBtn = document.getElementsByClassName("close")[0];
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+}
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+modal.onclick = function(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
